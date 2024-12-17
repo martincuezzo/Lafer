@@ -40,11 +40,8 @@ const CheckoutUseForm = () => {
     
     {orderId ? 
     <div>
-        <div style={{ width: '50vw' }}>
         <h2>¡Muchas gracias por tu compra!</h2>
         <h4> Tu numero de orden es: {orderId}</h4>
-        </div>
-        
     </div>
     :
     <div>      
