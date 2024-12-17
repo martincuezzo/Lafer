@@ -45,7 +45,8 @@ const CheckoutUseForm = () => {
     :
     <div>      
         <h1>Checkout</h1>
-             <form onSubmit={handleSubmit(onSubmit)}>
+        <h4>Datos de contacto:</h4>
+             <form onSubmit={handleSubmit(onSubmit)} style={{ width: '50vw' }}>
              <label>Nombre</label>
              <input className='form-control' {...register("nombre", {required:true, minLength:5})}/>
              {errors?.nombre?.type === "required" && <p style={{color:'gray'}}>Debe completar el campo Nombre</p>}

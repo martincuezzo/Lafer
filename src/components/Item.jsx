@@ -6,14 +6,15 @@ const Item = ({product}) => {
 
 
   return (
-<div className="card" style={{width:'18rem'}}>
+<div className="card m-2" style={{width:'18rem'}}>
   <img  src={product.img} className="card-img-top" alt={product.nombre}/>
-  <div className="card-body">
-    <h5 className="card-title">{product.nombre}</h5>
-    <p className="card-text">${product.precio}</p>
-    <button className="btn btn-dark m-2" onClick={()=> navegar(`/item/${product.id}`)} > Ver más</button>
+  <div className="card-body d-flex flex-column justify-content-center">
+    <h5 className="card-title text-center">{product.nombre}</h5>
+    <p className="card-text text-center">${product.precio}</p>
+    <button className="btn btn-dark" onClick={()=> navegar(`/item/${product.id}`)} > Ver más</button>
   </div>
 </div>
+
   )
 }
 

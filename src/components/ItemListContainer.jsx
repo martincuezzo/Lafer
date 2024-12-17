@@ -1,9 +1,8 @@
 import React,{useState,useEffect} from "react"
-import { getProductos, productosdb } from "../mock/data"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom"
 import { Container } from "react-bootstrap"
-import { addDoc, collection, getDocs, query, where} from "firebase/firestore"
+import { collection, getDocs, query, where} from "firebase/firestore"
 import { db } from "../services/firebase"
 
 const ItemListContainer = (props) =>{
@@ -37,29 +36,8 @@ getDocs(productsCollection)
 
 },[categoria])
 
-// MOCK LOCAL
-//   useEffect(()=>{
-//     setLoading(true)
-//     getProductos()
-    
-//   .then((res)=>{
-//     if(categoria){
-//         //filtro
-//         setProductos(res.filter((producto) => producto.categoria === categoria))
-//     }else{
-//         //respuesta sin filtrar
-//         setProductos(res)
-//     }
-// })
-//     .catch((error)=>console.log(error))
-//     .finally(()=>setLoading(false))
-//   },[categoria])
-
     const {greeting} = props
-   
-   
-
-
+ 
 return(
        <Container fluid>
       <div className="text-center bg-dark text-white">
